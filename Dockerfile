@@ -6,4 +6,4 @@ RUN pip install -r requirements.txt
 
 COPY src/ .
 
-CMD [ "python", "-u", "./src/whitelistbot.py"]
+CMD [ "python", "-u", "./whitelistbot.py"]
