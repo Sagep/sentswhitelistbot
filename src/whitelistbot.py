@@ -137,7 +137,6 @@ class SquadClient(discord.Client):
         To see if someone else has your SteamID on *their* whitelist, click the 🔎 button.
         
         You **must** have your Patreon linked to your Discord if you buy your whitelist via Patreon. *(use the Link button below)*""")
-        embed.add_field(name="​", inline=False, value="Made with ♥ by <@177189581060308992>")
         try:
             view = ButtonWhitelistGatherView()
         except Exception as e:
@@ -559,11 +558,6 @@ class ButtonCheckPatreonButton(discord.ui.Button):
                     await interaction.followup.send(msg, ephemeral=True, wait=True)
         else:
             await message.edit(content=f'{description}') 
-
-class ButtonLinkPatreonButton(discord.ui.Button):
-    def __init__(self):
-        super().__init__(label="Link Patreon to Discord",style=discord.ButtonStyle.link, url="https://patreon.com/auth/discord/connect")
-
 
 ## Clan Whitelists ##
 class ClanWhitelistsView(discord.ui.View):
